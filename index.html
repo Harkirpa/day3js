@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-decoration: underline;
+        text-align: center;
+      }
+      body {
+        background-image: linear-gradient(pink, blue, pink);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Day 4</h1>
+    <h3>Q-1 what are promises and why we need them?</h3>
+    <h4>
+      A JavaScript Promise object can be: Pending Fulfilled Rejected The Promise
+      object supports two properties: state and result. While a Promise object
+      is "pending" (working), the result is undefined. When a Promise object is
+      "fulfilled", the result is a value. When a Promise object is "rejected",
+      the result is an error object.
+    </h4>
+    <p id="demo"></p>
+    <pre>
+function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+          }
+          
+          let myPromise = new Promise(function(myResolve, myReject) {
+            let x = 0;
+          
+          // some code (try to change x to 5)
+          
+            if (x == 0) {
+              myResolve("OK");
+            } else {
+              myReject("Error");
+            }
+          });
+          
+          myPromise.then(
+            function(value) {myDisplayer(value);},
+            function(error) {myDisplayer(error);}
+          );</pre
+    >
+    <hr />
+    <hr />
+    <h3>Q-2 Promise chaining?</h3>
+    <h4>
+      Promises are useful when you have to handle more than one asynchronous
+      task, one after another. For that, we use promise chaining
+    </h4>
+    <pre>
+  let countValue = new Promise(function (resolve, reject) {
+        resolve("Promise resolved");
+      });
+      
+      // executes when promise is resolved successfully
+      
+      countValue
+        .then(function successValue(result) {
+          console.log(result);
+        })
+      
+        .then(function successValue1() {
+          console.log("You can call multiple functions this way.");
+        });</pre
+    >
+    <hr />
+    <hr />
+    <h3>Q-3 DOM</h3>
+    <h4>
+      DOM - The Document Object Model (DOM) is a programming interface for web
+      documents. It represents the page so that programs can change the document
+      structure, style, and content. The DOM represents the document as nodes
+      and objects, and that way, programming languages can interact with the
+      page. The Document Object represents the whole html document. When an html
+      document is loaded in the browser, it becomes a document object. It is the
+      root element that represents the html document. It has properties and
+      methods. By the help of document objects, we can add dynamic content to
+      our web page.
+    </h4>
+    <hr>
+    <hr>
+    <h3>Q-4 Operators</h3>
+    <h4>
+      There are seven types of operators- (a)Arithmetic Operators - These are
+      used to perform mathematical operations like addition, subtraction,
+      multiplication, and division. (b)Comparison Operators - These are used to
+      compare two values and return a Boolean value (true or false) (c)Logical
+      Operators - These are used to perform logical operations such as AND (&&),
+      OR (||), and NOT (!). (d)Bitwise Operators - These are used to perform
+      bitwise operations on binary numbers. (e)Conditional (ternary) operator -
+      This operator allows for a concise way of writing an if...else statement.
+      (f)Type Operator - Type Operators: These are used to determine the type of
+      a value. The most common type operator is typeof. (g) Assignment Operators
+      - These are used to assign values to variables.
+    </h4>
+    <hr>
+    <hr>
+    <h3>Q-5 Closures</h3>
+    <h4>
+      Closure - A closure can be defined as a JavaScript feature in which the
+      inner function has access to the outer function variable. In JavaScript,
+      every time a closure is created with the creation of a function. The
+      closure has three scope chains listed as follows: Access to its own scope.
+      Access to the variables of the outer function. Access to the global
+      variables.
+    </h4>
+    <pre> function hii() {
+      let b = 1;
+      function inner() {
+          return b;
+      }
+      return inner;
+  }
+  let get_func_inner = hii();
+   
+  console.log(get_func_inner());
+  console.log(get_func_inner());
+  console.log(get_func_inner()); </pre>
+    <hr>
+    <hr>
+    <h3>Q-6 Objects</h3>
+    <h4>
+      The Object type represents one of JavaScript's data types. It is used to
+      store various keyed collections and more complex entities. Objects can be
+      created using the Object() constructor or the object initializer / literal
+      syntax
+    </h4>
+    <script src="./script.js"></script>
+  </body>
+</html>
